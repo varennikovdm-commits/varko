@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Солнечная Ферма</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="hero">
+        <h1>☀️ Солнечная Ферма</h1>
+        <p>Собирай энергию, улучшай ферму и растишь уровень!</p>
+      </header>
+
+      <section class="stats">
+        <div class="stat-card">
+          <span class="label">Очки</span>
+          <span id="points" class="value">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="label">Уровень</span>
+          <span id="level" class="value">1</span>
+        </div>
+        <div class="stat-card">
+          <span class="label">Сила клика</span>
+          <span id="power" class="value">1</span>
+        </div>
+      </section>
+
+      <section class="sun-area">
+        <div id="sun" class="sun"></div>
+        <div class="flare"></div>
+        <div class="farm-background" id="farmBackground"></div>
+      </section>
+
+      <section class="progress">
+        <div class="progress-header">
+          <span>Энергия</span>
+          <span id="xpLabel">0 / 100</span>
+        </div>
+        <div class="progress-bar">
+          <div id="xpBar" class="progress-fill"></div>
+        </div>
+      </section>
+
+      <section class="shop">
+        <h2>🛒 Магазин улучшений</h2>
+        <div class="shop-grid">
+          <button class="shop-item" id="buyPower">
+            <span>⚡️ Сила клика</span>
+            <small id="powerCost">Стоимость: 30</small>
+          </button>
+          <button class="shop-item" id="buyAuto">
+            <span>🤖 Автокликер</span>
+            <small id="autoCost">Стоимость: 120</small>
+          </button>
+          <button class="shop-item" id="buyFarm">
+            <span>🌻 Солнечные фермы</span>
+            <small id="farmCost">Стоимость: 300</small>
+          </button>
+        </div>
+      </section>
+
+      <section class="actions">
+        <button id="saveBtn" class="primary">Сохранить прогресс</button>
+      </section>
+    </div>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
