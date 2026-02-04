@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Солнечный кликер</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="{{ url_for('static', filename='clicker.js') }}" defer></script>
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Солнечный кликер ☀️</h1>
+        <p class="subtitle">Кликайте по солнышку, чтобы прокачивать атмосферу.</p>
+      </header>
+
+      <section class="stats">
+        <div class="stat">
+          <span class="stat-label">Сила солнца</span>
+          <span id="power" class="stat-value">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Уровень</span>
+          <span id="level" class="stat-value">1</span>
+        </div>
+      </section>
+
+      <section class="playfield">
+        <button id="sun" class="sun" aria-label="Солнышко для кликов"></button>
+        <div id="glow" class="glow"></div>
+      </section>
+
+      <section class="upgrade">
+        <h2>Прокачка</h2>
+        <p id="upgrade-text">Солнышко только проснулось. Продолжайте клики, чтобы усилить сияние.</p>
+      </section>
+    </main>
+  </body>
+</html>
