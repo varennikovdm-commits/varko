@@ -123,7 +123,9 @@ def fetch_weather(city: City) -> Tuple[int, str, int] | None:
 
 def main() -> None:
     logging.basicConfig(level=logging.INFO)
-    token = os.getenv("TELEGRAM_BOT_TOKEN", "7991138339:AAGUvKh4l8VTxNOFLoGEVW1-_m7n8yhg_U0")
+    token = os.getenv("TELEGRAM_BOT_TOKEN")
+    if not token:
+        raise RuntimeError("TELEGRAM_BOT_TOKEN is not set. Please export a valid token.")
     application = Application.builder().token(token).build()
 
     application.add_handler(CommandHandler("start", start))
