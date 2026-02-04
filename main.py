@@ -234,7 +234,7 @@ async def fetch_weather(lat: float, lon: float) -> dict[str, Any]:
         "lon": lon,
         "lang": "ru_RU",
         "limit": 3,
-        "hours": False,
+        "hours": "false",
         "extra": True,
     }
     headers = {"X-Yandex-API-Key": YANDEX_API_KEY}
