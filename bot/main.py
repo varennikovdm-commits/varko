@@ -209,9 +209,8 @@ async def main() -> None:
     bot = Bot(bot_token)
     dispatcher = Dispatcher(storage=MemoryStorage())
     dispatcher.include_router(router)
-    dispatcher[WeatherConfig] = config
 
-    await dispatcher.start_polling(bot)
+    await dispatcher.start_polling(bot, config=config)
 
 
 if __name__ == "__main__":
