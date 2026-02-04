@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Солнечная Ферма</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app__header">
+      <div>
+        <h1>Солнечная Ферма</h1>
+        <p>Собирай солнечную энергию и развивай ферму.</p>
+      </div>
+      <button class="btn btn--ghost" id="toggle-shop">Магазин</button>
+    </header>
+
+    <section class="stats">
+      <div class="stat">
+        <span class="label">Энергия</span>
+        <span class="value" id="energy">0</span>
+      </div>
+      <div class="stat">
+        <span class="label">Уровень</span>
+        <span class="value" id="level">1</span>
+      </div>
+      <div class="stat">
+        <span class="label">Автоклик</span>
+        <span class="value" id="auto">0/сек</span>
+      </div>
+    </section>
+
+    <section class="progress">
+      <div class="progress__info">
+        <span id="level-label">До уровня 2</span>
+        <span id="progress-value">0%</span>
+      </div>
+      <div class="progress__bar">
+        <div class="progress__fill" id="progress-fill"></div>
+      </div>
+    </section>
+
+    <main class="game">
+      <div class="sun-wrapper" id="sun-wrapper">
+        <button class="sun" id="sun" aria-label="Солнце"></button>
+      </div>
+      <div class="floating" id="floating"></div>
+    </main>
+
+    <section class="shop" id="shop">
+      <h2>Улучшения</h2>
+      <div class="shop__list">
+        <div class="shop__item">
+          <div>
+            <h3>Усиление клика</h3>
+            <p>+1 к силе каждого клика.</p>
+          </div>
+          <button class="btn" data-upgrade="click">Купить (<span id="cost-click">10</span>)</button>
+        </div>
+        <div class="shop__item">
+          <div>
+            <h3>Автокликер</h3>
+            <p>+1 энергия в секунду.</p>
+          </div>
+          <button class="btn" data-upgrade="auto">Купить (<span id="cost-auto">25</span>)</button>
+        </div>
+        <div class="shop__item">
+          <div>
+            <h3>Солнечная ферма</h3>
+            <p>+3 энергии в секунду и новый фон.</p>
+          </div>
+          <button class="btn" data-upgrade="farm">Купить (<span id="cost-farm">100</span>)</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
